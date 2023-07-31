@@ -1,0 +1,80 @@
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+
+local Window = Rayfield:CreateWindow({
+   Name = "🌀 Aws  Teleport script 🌀",
+   LoadingTitle = "Hula's hub",
+   LoadingSubtitle = "by Hula",
+   ConfigurationSaving = {
+      Enabled = false,
+      FolderName = nil, -- Create a custom folder for your hub/game
+      FileName = "Hula's hub"
+   },
+   Discord = {
+      Enabled = true,
+      Invite = "CodeBros's Scripts", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ABCD would be ABCD
+      RememberJoins = true -- Set this to false to make them join the discord every time they load it up
+   },
+   KeySystem = true, -- Set this to true to use our key system
+   KeySettings = {
+      Title = "Aws simulator | Key",
+      Subtitle = "Link In Discord",
+      Note = "Join server from misc tab",
+      FileName = "Key", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
+      SaveKey = false, -- The user's key will be saved, but if you change the key, they will be unable to use your script
+      GrabKeyFromSite = true, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+      Key = {"https://pastebin.com/raw/iKE6R9JX"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
+   }
+})
+
+local MainTab = Window:CreateTab("🌀Worlds🌀", nil) -- Title, Image
+local MainSection = MainTab:CreateSection("Main")
+
+Rayfield:Notify({
+   Title = "Join Our Discord:)",
+   Content = "^Join!",
+   Duration = 6,
+   Image = nil,
+   Actions = { -- Notification Buttons
+      Ignore = {
+         Name = "Okay!",
+         Callback = function()
+         print("The user tapped Okay!")
+      end
+   },
+},
+})
+
+local Button = MainTab:CreateButton({
+   Name = " 🏫 World 1 🏫",
+   Callback = function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-10324.0957, 3.8310616, 34.5033531, 1, -3.88554469e-08, -4.05907218e-11, 3.88554469e-08, 1, -6.00471708e-08, 4.05930532e-11, 6.00471708e-08, 1)
+   end,
+})
+
+local Button = MainTab:CreateButton({
+   Name = "🏋️ World 2🏋️",
+   Callback = function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-10324.1309, 3.85656118, 637.794006, 1, 6.73713032e-08, -2.70617352e-06, -6.73714666e-08, 1, -6.02943544e-08, 2.70617352e-06, 6.0294532e-08, 1)
+   end,
+})
+
+local Button = MainTab:CreateButton({
+   Name = "🏖 world 3 🏖️",
+   Callback = function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(11620.2559, 9.56125546, 25.4942322, 1, 1.62116953e-09, 9.39829459e-09, -1.62116964e-09, 1, 1.24751818e-08, -9.39829459e-09, -1.24751818e-08, 1)
+   end,
+})
+
+local Button = MainTab:CreateButton({
+   Name = "☣️ World 4 ☣️",
+   Callback = function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-10309.2676, 4.02372694, -849.461914, 1, -3.19972351e-08, 6.7630479e-10, 3.19972351e-08, 1, 8.91209382e-08, -6.76307677e-10, -8.91209382e-08, 1)
+   end,
+})
+
+local Button = MainTab:CreateButton({
+   Name = "🔱 Atlantis Event World🔱 ",
+   Callback = function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(9582.27344, 8.87373543, 92.7462692, 0.607048392, -8.37822611e-08, -0.79466486, -8.40911341e-09, 1, -1.11854703e-07, 0.79466486, 7.45836459e-08, 0.607048392)
+   end,
+})
